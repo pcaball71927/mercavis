@@ -1,0 +1,7 @@
+{
+  "name": "mercavis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
