@@ -24,3 +24,87 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600; 700&display=swap');
+
+:root {
+
+    --ion-font-family: 'Poppins', sans-serif;
+   
+    --ion-color-turquesa: #11C2C4;
+	--ion-color-turquesa-rgb: 17,194,196;
+	--ion-color-turquesa-contrast: #ffffff;
+	--ion-color-turquesa-contrast-rgb: 255,255,255;
+	--ion-color-turquesa-shade: #0fabac;
+	--ion-color-turquesa-tint: #29c8ca;
+
+    --ion-color-turquesa-dark: #0D494B;
+	--ion-color-turquesa-dark-rgb: 13,73,75;
+	--ion-color-turquesa-dark-contrast: #ffffff;
+	--ion-color-turquesa-dark-contrast-rgb: 255,255,255;
+	--ion-color-turquesa-dark-shade: #0b4042;
+	--ion-color-turquesa-dark-tint: #255b5d;
+    /** primary **/
+}
+
+.hv-100{
+	height: 100vh;
+}
+   
+.ion-color-turquesa {
+	--ion-color-base: var(--ion-color-turquesa);
+	--ion-color-base-rgb: var(--ion-color-turquesa-rgb);
+	--ion-color-contrast: var(--ion-color-turquesa-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-turquesa-contrast-rgb);
+	--ion-color-shade: var(--ion-color-turquesa-shade);
+	--ion-color-tint: var(--ion-color-turquesa-tint);
+}
+.ion-color-turquesa-dark {
+	--ion-color-base: var(--ion-color-turquesa-dark);
+	--ion-color-base-rgb: var(--ion-color-turquesa-dark-rgb);
+	--ion-color-contrast: var(--ion-color-turquesa-dark-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-turquesa-dark-contrast-rgb);
+	--ion-color-shade: var(--ion-color-turquesa-dark-shade);
+	--ion-color-tint: var(--ion-color-turquesa-dark-tint);
+}
+
+.logo{
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 200px;
+
+}
+
+h1{
+    font-weight: 700;
+}
+
+.form-control {
+	margin-top: .1em;
+    margin-bottom: 1em;
+    label{
+        font-size: .9em;
+		font-weight: 500;
+        
+    }
+    input{
+        border: 1px solid;
+        padding: .5em 1em;
+        background: transparent;
+        width: 100%;
+    }
+}
+
+ion-item{
+    border-top: 2px dotted #11C2C4;
+    border-bottom: 2px dotted #11C2C4;
+    &:last-child{
+        border-top: none;
+    }
+}
+
+.button-square{
+
+    height: 6em;
+}

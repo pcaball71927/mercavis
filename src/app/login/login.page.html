@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-grid class="hv-100">
+    <ion-row class="hv-100 ion-justify-content-center ion-align-items-center">
+      <ion-col size="10">
+        <ion-img class="logo" src="assets/img/logo.png" alt="Quick Event Logo"></ion-img>
+        
+        <ion-text class="ion-text-center">
+          <h4 class="ion-margin-top">Login</h4>
+        </ion-text>
+      <div class="form-control">
+        <label for="">Cédula:</label>
+        <input type="text" placeholder="Número de Cédula">
+      </div>
+      <div class="form-control">
+        <label for="">Contraseña:</label>
+        <input type="password" placeholder="Contraseńa">
+      </div>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button 
+          class="ion-text-uppercase" 
+          mode="md" 
+          expand="block" 
+          color="light"
+          [routerLink]="['/register']"
+          >Registro</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button 
+          class="ion-text-uppercase" 
+          mode="md" 
+          expand="block" 
+          color="turquesa"
+          [routerLink]="['/shopping-cart']"
+          >Ingresar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

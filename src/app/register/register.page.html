@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/login']" routerDirection="back">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="10">
+        <ion-img class="logo" src="assets/img/logo.png" alt="Quick Event Logo"></ion-img>
+
+        <ion-text class="ion-text-center">
+          <h4 class="ion-margin-top">Registro</h4>
+        </ion-text>
+        
+        <div class="form-control">
+          <label for="">Nombre completo:</label>
+          <input type="text" placeholder="Nombre completo">
+        </div>
+        <div class="form-control">
+          <label for="">Cédula:</label>
+          <input type="text" placeholder="Número de Cédula">
+        </div>
+        <div class="form-control">
+          <label for="">Dirección:</label>
+          <input type="address" placeholder="Dirección">
+        </div>
+        <div class="form-control">
+          <label for="">Correo:</label>
+          <input type="email" placeholder="Correo electrónico">
+        </div>
+        <div class="form-control">
+          <label for="">Contraseña:</label>
+          <input type="password" placeholder="Contraseńa">
+        </div>
+      </ion-col>
+      <ion-col size="6">
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="ion-text-uppercase" mode="md" expand="block" color="turquesa"
+          [routerLink]="['/shopping-cart']">registrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,9 +1,100 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>shopping-cart</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <ion-row class="ion-justify-content-center ion-align-items-center ion-margin-top">
+      <ion-col size="3">
+        <ion-img  src="assets/img/logo.png" alt="Quick Event Logo"></ion-img>
+      </ion-col>
+      <ion-col size="9">
+        <ion-text>
+          <h4 class="ion-no-margin">Carrito de compras</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col class="ion-margin-top" size="12">
+        <ion-button class="ion-text-uppercase ion-margin-top" size="large" mode="md" expand="block" color="turquesa-dark"
+        [routerLink]="">Finalizar Compra</ion-button>
+        <ion-button class="ion-text-uppercase" size="large" mode="md" expand="block" color="turquesa"
+        [routerLink]="">Agregar producto</ion-button>
+      </ion-col>
 
+      <ion-col size="6">
+        <ion-text>
+          <h5 class="ion-no-margin ion-text-center">Total:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <h5 class="ion-no-margin">$6.000</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12">
+        <ion-text>
+          <h5 class="ion-no-margin ion-text-center ion-margin-top">Lista de productos</h5>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="12">
+        
+        <ion-list>
+        
+          <ion-item>
+            <ion-label class="ion-text-wrap">
+              <ion-row>
+                <ion-col size="4">
+               <ion-text>
+                 <h3 class="ion-text-uppercase">Pasta risoni barilla</h3>
+               </ion-text>
+             </ion-col>
+             <ion-col size="4">
+               $6.000
+             </ion-col>
+             <ion-col size="4">
+              1 unidad
+             </ion-col>
+             </ion-row>
+            <p>Pasta de 500 gramos de origen italiano con tamaño n.26 y 
+            forma de granos de arroz, hecha a base de semóla integral
+            de trigo duro y agua con cocción requerida de 9 minutos.</p> 
+            <br>
+            <ion-text class="ion-margin-top" color="danger">
+             <p class="ion-margin-top">
+               <strong>
+                Contiene derivados de trigo. Puede contener soya. Contiene gluten.
+               </strong>
+             </p> 
+            </ion-text>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-text-wrap">
+              <ion-row>
+                <ion-col size="4">
+               <ion-text>
+                 <h3 class="ion-text-uppercase">Pasta risoni barilla</h3>
+               </ion-text>
+             </ion-col>
+             <ion-col size="4">
+               $6.000
+             </ion-col>
+             <ion-col size="4">
+              1 unidad
+             </ion-col>
+             </ion-row>
+            <p>Pasta de 500 gramos de origen italiano con tamaño n.26 y 
+            forma de granos de arroz, hecha a base de semóla integral
+            de trigo duro y agua con cocción requerida de 9 minutos.</p> 
+            <br>
+            <ion-text class="ion-margin-top" color="danger">
+             <p class="ion-margin-top">
+               <strong>
+                Contiene derivados de trigo. Puede contener soya. Contiene gluten.
+               </strong>
+             </p> 
+            </ion-text>
+            </ion-label>
+          </ion-item>
+        
+        </ion-list>
+
+      </ion-col>
+     
+    </ion-row>
 </ion-content>
