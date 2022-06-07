@@ -7,13 +7,16 @@
         <ion-text class="ion-text-center">
           <h4 class="ion-margin-top">Login</h4>
         </ion-text>
+        <p class="ion-text-center ion-error" *ngIf="msg">
+          <ion-text color="danger">{{msg_string}}</ion-text>
+        </p>
       <div class="form-control">
-        <label for="">Cédula:</label>
-        <input type="text" placeholder="Número de Cédula">
+        <label for="">Correo Electrónico:</label>
+        <input type="email" placeholder="Correo Electrónico" [(ngModel)]="email">
       </div>
       <div class="form-control">
         <label for="">Contraseña:</label>
-        <input type="password" placeholder="Contraseńa">
+        <input type="password" placeholder="Contraseńa" [(ngModel)]="password">
       </div>
       </ion-col>
       <ion-col size="6">
@@ -31,7 +34,7 @@
           mode="md" 
           expand="block" 
           color="turquesa"
-          [routerLink]="['/shopping-cart']"
+          (click)="login()"
           >Ingresar</ion-button>
       </ion-col>
     </ion-row>

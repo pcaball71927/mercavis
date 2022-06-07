@@ -11,6 +11,7 @@
 <ion-content>
 
   <ion-grid>
+    <form [formGroup]="registerForm">
     <ion-row class="ion-justify-content-center ion-align-items-center">
       <ion-col size="10">
         <ion-img class="logo" src="assets/img/logo.png" alt="Quick Event Logo"></ion-img>
@@ -18,34 +19,40 @@
         <ion-text class="ion-text-center">
           <h4 class="ion-margin-top">Registro</h4>
         </ion-text>
+
+        <p class="ion-text-center" *ngIf="invalid_form || error">
+          <ion-text color="danger" *ngIf="invalid_form">Formulario no válido, por favor completa todos los campos.</ion-text>
+          <ion-text color="danger" *ngIf="error">Lo siento, algo está mal. por favor comunícate con nosotros.</ion-text>
+        </p>
         
         <div class="form-control">
           <label for="">Nombre completo:</label>
-          <input type="text" placeholder="Nombre completo">
+          <input type="text" placeholder="Nombre completo" class="{{ f.full_name.errors && f.full_name.touched ? 'ion-border-danger' : '' }}" formControlName="full_name">
         </div>
         <div class="form-control">
           <label for="">Cédula:</label>
-          <input type="text" placeholder="Número de Cédula">
+          <input type="text" placeholder="Número de Cédula" class="{{ f.cedula.errors && f.cedula.touched ? 'ion-border-danger' : '' }}" formControlName="cedula">
         </div>
         <div class="form-control">
           <label for="">Dirección:</label>
-          <input type="address" placeholder="Dirección">
+          <input type="address" placeholder="Dirección" class="{{ f.address.errors && f.address.touched ? 'ion-border-danger' : '' }}" formControlName="address">
         </div>
         <div class="form-control">
           <label for="">Correo:</label>
-          <input type="email" placeholder="Correo electrónico">
+          <input type="email" placeholder="Correo electrónico" class="{{ f.email.errors && f.email.touched ? 'ion-border-danger' : '' }}" formControlName="email">
         </div>
         <div class="form-control">
           <label for="">Contraseña:</label>
-          <input type="password" placeholder="Contraseńa">
+          <input type="password" placeholder="Contraseńa" class="{{ f.password.errors && f.password.touched ? 'ion-border-danger' : '' }}" formControlName="password">
         </div>
       </ion-col>
       <ion-col size="6">
       </ion-col>
       <ion-col size="6">
         <ion-button class="ion-text-uppercase" mode="md" expand="block" color="turquesa"
-          [routerLink]="['/shopping-cart']">registrar</ion-button>
+          (click)="onSubmit()">registrar</ion-button>
       </ion-col>
     </ion-row>
+    </form>
   </ion-grid>
 </ion-content>

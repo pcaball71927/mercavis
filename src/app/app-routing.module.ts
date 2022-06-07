@@ -1,31 +1,35 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+/* guards */
+import { AuthenticatedGuard } from '../guards/authenticated.guard';
+import { UnauthenticatedGuard } from '../guards/unauthenticated.guard';
+
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    canActivate: [UnauthenticatedGuard]
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule),
+    canActivate: [UnauthenticatedGuard]
   },
   {
     path: 'shopping-cart',
-    loadChildren: () => import('./shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule)
+    loadChildren: () => import('./shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule),
+    canActivate: [AuthenticatedGuard]
   },
   {
     path: 'product-description',
-    loadChildren: () => import('./product-description/product-description.module').then( m => m.ProductDescriptionPageModule)
+    loadChildren: () => import('./product-description/product-description.module').then( m => m.ProductDescriptionPageModule),
+    canActivate: [AuthenticatedGuard]
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
 ];
 

@@ -1,0 +1,6 @@
+{
+	"appId": "io.paula.mercavis",
+	"appName": "Mercavis",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

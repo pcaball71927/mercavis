@@ -4,7 +4,7 @@
       <ion-img  src="assets/img/logo.png" alt="Quick Event Logo"></ion-img>
     </ion-col>
     <ion-col size="6">
-      <ion-img src="assets/img/producto.jpg" alt="Producto"></ion-img>
+      <ion-img [src]="product.image" alt="Producto"></ion-img>
 
     </ion-col>
     <ion-col size="3">
@@ -13,26 +13,24 @@
     
     <ion-col size="12">
       <ion-text>
-        <h5 class="ion-no-margin ion-text-center ion-text-uppercase">Pasta risoni barilla</h5>
-        <p>Pasta de 500 gramos de origen italiano con tamaño n.26 y 
-          forma de granos de arroz, hecha a base de semóla integral
-          de trigo duro y agua con cocción requerida de 9 minutos.</p>
-          <p>Contiene derivados de trigo. Puede contener soya. Contiene gluten.</p>
+        <h5 class="ion-no-margin ion-text-center ion-text-uppercase">{{product.name}}</h5>
+        <p>{{product.description}}</p>
+        <p color="danger">{{product.allergens}}</p>
+      </ion-text>
+    </ion-col>
+    <ion-col size="12">
+      <ion-text>
+        <h5 class="ion-no-margin ion-text-center ion-text-uppercase">{{product.price |currency:'COP':'$':'1.0-0'}} pesos Colombianos</h5>
       </ion-text>
     </ion-col>
     <ion-col size="6">
       <ion-button class=" button-square" size="large" mode="md" expand="block" color="turquesa"
-      [routerLink]="">Agregar</ion-button>
+      (click)="addProduct()">Agregar</ion-button>
     </ion-col>
     
     <ion-col size="6">
       <ion-button class="button-square" size="large" mode="md" expand="block" color="danger"
-      [routerLink]="">Descartar</ion-button>
-    </ion-col>
-    <ion-col size="12">
-      <ion-text>
-        <h5 class="ion-no-margin ion-text-center ion-text-uppercase">6.000 pesos Colombianos</h5>
-      </ion-text>
+      (click)="deleteProduct()">Descartar</ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
