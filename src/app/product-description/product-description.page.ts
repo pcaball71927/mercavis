@@ -66,6 +66,7 @@ export class ProductDescriptionPage implements OnInit {
   }
 
   async deleteProduct(){
+    this.stop();
     this.navCtrl.pop();
   }
 
